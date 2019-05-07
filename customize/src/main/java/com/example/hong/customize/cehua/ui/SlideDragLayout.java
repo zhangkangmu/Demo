@@ -136,6 +136,12 @@ public class SlideDragLayout extends FrameLayout {
                 //在右半边
                 open();
             }
+            //处理用户的稍微滑动
+            if(xvel>200 && currentState!=DragState.Open){
+                open();
+            }else if (xvel<-200 && currentState!=DragState.Close) {
+                close();
+            }
         }
     };
 
@@ -163,12 +169,12 @@ public class SlideDragLayout extends FrameLayout {
         getBackground().setColorFilter((Integer) ColorUtil.evaluateColor(fraction,Color.BLACK,Color.TRANSPARENT), PorterDuff.Mode.SRC_OVER);
     }
 
-    private void open() {
+    public void open() {
         viewDragHelper.smoothSlideViewTo(mainView,(int) dragRange,mainView.getTop());
         ViewCompat.postInvalidateOnAnimation(SlideDragLayout.this);
     }
 
-    private void close() {
+    public void close() {
         viewDragHelper.smoothSlideViewTo(mainView,0,mainView.getTop());
         ViewCompat.postInvalidateOnAnimation(SlideDragLayout.this);
     }
@@ -201,6 +207,10 @@ public class SlideDragLayout extends FrameLayout {
         }
         menuView = getChildAt(0);
         mainView = getChildAt(1);
+    }
+
+    public DragState getCurrentState() {
+        return currentState;
     }
 
     //定义状态常量

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.animation.CycleInterpolator;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import com.example.hong.customize.R;
 import com.example.hong.customize.R2;
 import com.example.hong.customize.cehua.other.Constant;
+import com.example.hong.customize.cehua.ui.MLinearLayout;
 import com.example.hong.customize.cehua.ui.SlideDragLayout;
 import com.nineoldandroids.view.ViewHelper;
 import com.nineoldandroids.view.ViewPropertyAnimator;
@@ -43,7 +45,7 @@ public class CehuaMainContent extends SupportFragment {
     @BindView(R2.id.rl_title)
     RelativeLayout rlTitle;
     @BindView(R2.id.my_layout)
-    ConstraintLayout myLayout;
+    MLinearLayout myLayout;
     @BindView(R2.id.slideMenu)
     SlideDragLayout slideMenu;
     Unbinder unbinder;
@@ -112,6 +114,7 @@ public class CehuaMainContent extends SupportFragment {
                 ViewHelper.setAlpha(ivHead,1-fraction);
             }
         });
+         myLayout.setSlideMenu(slideMenu);
     }
 
     @Override
