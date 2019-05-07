@@ -14,13 +14,13 @@ import me.yokeyword.fragmentation.SupportFragment;
  * Created by 洪 on 2019/5/2.
  */
 
-public class MainContent extends SupportFragment {
+public class CehuaMainContent extends SupportFragment {
 
-    public static MainContent newInstance() {
+    public static CehuaMainContent newInstance() {
         
         Bundle args = new Bundle();
         
-        MainContent fragment = new MainContent();
+        CehuaMainContent fragment = new CehuaMainContent();
         fragment.setArguments(args);
         return fragment;
     }
@@ -30,4 +30,5 @@ public class MainContent extends SupportFragment {
         View view = inflater.inflate(R.layout.customize_cehuamianban_mian, container, false);
         return view;
     }
+
 }
