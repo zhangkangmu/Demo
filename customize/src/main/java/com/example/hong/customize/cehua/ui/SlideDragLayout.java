@@ -110,9 +110,20 @@ public class SlideDragLayout extends FrameLayout {
             }
             //1.计算view移动的百分比
             float fraction = mainView.getLeft()/dragRange;
-            Log.e("zyh", "fraction:"+fraction);
             //2.执行一系列的伴随动画
             executeAnim(fraction);
+            //3.根据fraction判断开关，设置回调
+            if (fraction == 0f && currentState!=DragState.Close) {
+                //更改状态为关闭，并回调关闭的方法
+                currentState = DragState.Close;
+                if (mOnDragChangeListen != null)  mOnDragChangeListen.onClose();
+                //这里有一个bug，是fraction一直不为1.因此此处设为
+            } else if (fraction == 0.99999994f  && currentState!=DragState.Open) {
+                //更改状态为打开，并回调打开的方法
+                currentState = DragState.Open;
+                if (mOnDragChangeListen != null) mOnDragChangeListen.onOpen();
+            }
+            if (mOnDragChangeListen != null) mOnDragChangeListen.onDraging(fraction);
         }
 
         @Override
@@ -190,5 +201,34 @@ public class SlideDragLayout extends FrameLayout {
         }
         menuView = getChildAt(0);
         mainView = getChildAt(1);
+    }
+
+    //定义状态常量
+    enum DragState {
+        Open, Close;
+    }
+
+    private DragState currentState = DragState.Close;//当前SlideMenu的状态默认是关闭的
+
+    //回调
+    public interface OnDragChangeListen {
+        /**
+         * 关闭的回调
+         */
+        void onClose();
+        /**
+         * 打开的回调
+         */
+        void onOpen();
+        /**
+         * 正在拖拽中的回调
+         */
+        void onDraging(float fraction);
+    }
+
+    private OnDragChangeListen mOnDragChangeListen;
+
+    public void setOnDragChangeListen(OnDragChangeListen onDragChangeListen) {
+        this.mOnDragChangeListen = onDragChangeListen;
     }
 }

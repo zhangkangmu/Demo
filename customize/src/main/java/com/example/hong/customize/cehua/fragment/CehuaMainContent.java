@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.CycleInterpolator;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -18,7 +20,10 @@ import com.example.hong.customize.R;
 import com.example.hong.customize.R2;
 import com.example.hong.customize.cehua.other.Constant;
 import com.example.hong.customize.cehua.ui.SlideDragLayout;
+import com.nineoldandroids.view.ViewHelper;
 import com.nineoldandroids.view.ViewPropertyAnimator;
+
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -85,6 +90,26 @@ public class CehuaMainContent extends SupportFragment {
                 ViewPropertyAnimator.animate(view).scaleX(1).setDuration(200).start();
                 ViewPropertyAnimator.animate(view).scaleY(1).setDuration(200).start();
                 return view;
+            }
+        });
+
+        slideMenu.setOnDragChangeListen(new SlideDragLayout.OnDragChangeListen() {
+            @Override
+            public void onClose() {
+                Log.e("zyh", "onClose");
+                ViewPropertyAnimator.animate(ivHead).translationX(15).setInterpolator(new CycleInterpolator(4)).setDuration(200).start();
+            }
+
+            @Override
+            public void onOpen() {
+                Log.e("zyh","onOpen");
+                menuListview.smoothScrollToPosition(new Random().nextInt(menuListview.getCount()));
+            }
+
+            @Override
+            public void onDraging(float fraction ) {
+                Log.d("zyh","onDraging：fraction："+fraction);
+                ViewHelper.setAlpha(ivHead,1-fraction);
             }
         });
     }
