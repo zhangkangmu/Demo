@@ -1,0 +1,7 @@
+﻿1.MainActivity中增加判断之后，点击底部按钮不切换画面？？
+if (findFragment(CustomizeMain.class) == null) {
+     loadRootFragment(R.id.fl_content, CustomizeMain.newInstance());
+	 }
+
+
+2.CustomizeMain中使用黄油刀onViewClicked生效

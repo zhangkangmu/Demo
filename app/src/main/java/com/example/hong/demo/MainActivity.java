@@ -39,6 +39,7 @@ public class MainActivity extends SupportActivity {
     protected void onCreate(Bundle savedInstanceState) {
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         Log.d("zyh", 11111 + "");
         ButterKnife.bind(this);
