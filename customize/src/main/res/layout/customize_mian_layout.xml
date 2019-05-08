@@ -8,10 +8,18 @@
     android:id="@+id/tv_qq_cehuamianban"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@android:color/darker_gray"
     android:text="QQ左侧特效"
     android:textSize="16sp"
     android:layout_marginTop="15dp"
     android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_quick_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快速检测"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"/>
 
 </LinearLayout>
