@@ -5,3 +5,6 @@ if (findFragment(CustomizeMain.class) == null) {
 
 
 2.CustomizeMain中使用黄油刀onViewClicked生效
+
+3.QuickIndexMain中增加了：friends.add(new Friend("22张三"));
+这个字符会显示在上方，不知道怎么解决
