@@ -22,7 +22,7 @@
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:background="@drawable/head" />
+            android:background="@drawable/cehua_head" />
 
     </RelativeLayout>
 

@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/head" />
+        android:src="@drawable/cehua_head" />
 
     <ListView
         android:id="@+id/menu_listview"

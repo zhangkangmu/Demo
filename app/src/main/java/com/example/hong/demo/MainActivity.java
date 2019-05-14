@@ -41,7 +41,6 @@ public class MainActivity extends SupportActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
-        Log.d("zyh", 11111 + "");
         ButterKnife.bind(this);
 //        Fragmentation.builder()
 //                .stackViewMode(Fragmentation.BUBBLE)

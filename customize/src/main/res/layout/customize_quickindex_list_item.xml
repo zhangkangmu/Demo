@@ -28,5 +28,4 @@
         app:layout_constraintTop_toBottomOf="@+id/first_word"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
-
 </android.support.constraint.ConstraintLayout>

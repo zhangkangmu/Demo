@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/slideMenu"
-    android:background="@drawable/bg">
+    android:background="@drawable/cehua_bg">
 
     <!-- 菜单的布局 -->
     <include layout="@layout/customize_cehuamianban_menu"/>

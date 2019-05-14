@@ -42,7 +42,7 @@ private Context mContext;
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(convertView==null){
-            convertView=View.inflate(mContext, R.layout.customize_quickindex_list_item,null);
+            convertView=View.inflate(mContext, R.layout.customize_quickindex_list_item2,null);
         }
         ViewHolder holder = ViewHolder.getHolder(convertView);
         //设置数据
@@ -73,8 +73,8 @@ private Context mContext;
         TextView name,first_word;
 
         public ViewHolder(View convertView) {
-            name = (TextView) convertView.findViewById(R.id.name);
-            first_word = (TextView) convertView.findViewById(R.id.first_word);
+            name =  convertView.findViewById(R.id.name);
+            first_word =convertView.findViewById(R.id.first_word);
         }
 
         public static ViewHolder getHolder(View convertView) {

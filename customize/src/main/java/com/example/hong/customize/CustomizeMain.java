@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.hong.customize.cehua.fragment.CehuaMainContent;
+import com.example.hong.customize.headParallax.fragment.ParallaxMain;
 import com.example.hong.customize.quickindex.fragment.QuickIndexMain;
 
 import butterknife.BindView;
@@ -27,6 +28,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     TextView tvquickindex;
 
     Unbinder unbinder;
+    @BindView(R2.id.tv_parallax)
+    TextView tvParallax;
 
     public static CustomizeMain newInstance() {
 
@@ -36,7 +39,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         fragment.setArguments(args);
         return fragment;
     }
-    
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -54,6 +57,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     private void initOnClickListen() {
         tvQqCehuamianban.setOnClickListener(this);
         tvquickindex.setOnClickListener(this);
+        tvParallax.setOnClickListener(this);
     }
 
     @Override
@@ -83,8 +87,10 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         int i = v.getId();
         if (i == R.id.tv_qq_cehuamianban) {
             start(CehuaMainContent.newInstance());
-        }else if (i==R.id.tv_quick_index){
+        } else if (i == R.id.tv_quick_index) {
             start(QuickIndexMain.newInstance());
+        }else if (i==R.id.tv_parallax){
+            start(ParallaxMain.newInstance());
         }
     }
 }

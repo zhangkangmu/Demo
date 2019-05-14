@@ -48,6 +48,7 @@ public class QuickIndexBar extends View {
         paint.setTextAlign(Paint.Align.CENTER);
     }
 
+    //onMesure==》onSizeChanged ==》onlayout
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
@@ -76,10 +77,12 @@ public class QuickIndexBar extends View {
             case MotionEvent.ACTION_MOVE:
                 float y =event.getY();
                 int index = (int) (y / cellHeight);
-                if (lastIndex!=index){
+                if (lastIndex != index) {
+                    if (index <= 25) {
 //                Log.d("zyh",indexArr[index]);
-                    if (mOnTouchListener!=null){
-                        mOnTouchListener.onTouchLetter(indexArr[index]);
+                        if (mOnTouchListener != null) {
+                            mOnTouchListener.onTouchLetter(indexArr[index]);
+                        }
                     }
                 }
                 lastIndex=index;

@@ -8,3 +8,17 @@ if (findFragment(CustomizeMain.class) == null) {
 
 3.QuickIndexMain中增加了：friends.add(new Friend("22张三"));
 这个字符会显示在上方，不知道怎么解决
+
+4.customize_quickindex_list_item2.xml里就可以，但是customize_quickindex_list_item.xml用约束布局就会产生空白
+
+5.ParallaxListView中  maxHeight = orignalHeight>drawableHeight?orignalHeight*2:drawableHeight+400;
+本来没有200的，这里不知道为什么不会显示完全的照片，总是缺一点，但是log显示了图片和最大的高度都是732了，然而没有显示完全
+
+
+
+
+
+
+晚点需要弄的东西：
+圆角图片自定义
+叠层头像

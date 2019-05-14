@@ -78,8 +78,6 @@ public class TestDragLayout extends FrameLayout {
          */
         @Override
         public int getViewHorizontalDragRange(View child) {
-            Log.d("zyh-getViewHorizontalDragRange-getMeasuredWidth",getMeasuredWidth()+"");
-            Log.d("zyh-getViewHorizontalDragRange-child",child.getMeasuredWidth()+"");
             return getMeasuredWidth()-child.getMeasuredWidth();
         }
 
@@ -137,7 +135,6 @@ public class TestDragLayout extends FrameLayout {
             //计算滑行的百分比例
             float fractionLeft = changedView.getLeft() * 1f / (getMeasuredWidth() - changedView.getMeasuredWidth());
 //            float fractionTop = changedView.getTop() * 1f / (getMeasuredHeight() - changedView.getMeasuredHeight());
-            Log.d("zyh-滑行的百分比例", fractionLeft + "");
             executeAnim(fractionLeft);
 //            executeAnim(fractionTop);
 
