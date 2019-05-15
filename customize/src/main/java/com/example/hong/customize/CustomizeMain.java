@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.hong.customize.cehua.fragment.CehuaMainContent;
+import com.example.hong.customize.cehuadeleted.fragment.SwipeMain;
 import com.example.hong.customize.headParallax.fragment.ParallaxMain;
 import com.example.hong.customize.quickindex.fragment.QuickIndexMain;
 
@@ -30,6 +31,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     Unbinder unbinder;
     @BindView(R2.id.tv_parallax)
     TextView tvParallax;
+    @BindView(R2.id.tv_swipelayout)
+    TextView tvSwipelayout;
 
     public static CustomizeMain newInstance() {
 
@@ -58,6 +61,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         tvQqCehuamianban.setOnClickListener(this);
         tvquickindex.setOnClickListener(this);
         tvParallax.setOnClickListener(this);
+        tvSwipelayout.setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +95,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
             start(QuickIndexMain.newInstance());
         }else if (i==R.id.tv_parallax){
             start(ParallaxMain.newInstance());
+        }else if (i==R.id.tv_swipelayout){
+            start(SwipeMain.newInstance());
         }
     }
 }
