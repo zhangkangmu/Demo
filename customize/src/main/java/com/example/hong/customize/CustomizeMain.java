@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.hong.customize.cehua.fragment.CehuaMainContent;
 import com.example.hong.customize.cehuadeleted.fragment.SwipeMain;
 import com.example.hong.customize.headParallax.fragment.ParallaxMain;
+import com.example.hong.customize.nianxingkongjian.fragment.GooMian;
 import com.example.hong.customize.quickindex.fragment.QuickIndexMain;
 
 import butterknife.BindView;
@@ -33,6 +34,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     TextView tvParallax;
     @BindView(R2.id.tv_swipelayout)
     TextView tvSwipelayout;
+    @BindView(R2.id.tv_gooview)
+    TextView tvgooview;
 
     public static CustomizeMain newInstance() {
 
@@ -62,6 +65,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         tvquickindex.setOnClickListener(this);
         tvParallax.setOnClickListener(this);
         tvSwipelayout.setOnClickListener(this);
+        tvgooview.setOnClickListener(this);
     }
 
     @Override
@@ -97,6 +101,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
             start(ParallaxMain.newInstance());
         }else if (i==R.id.tv_swipelayout){
             start(SwipeMain.newInstance());
+        }else if (i==R.id.tv_gooview){
+            start(GooMian.newInstance());
         }
     }
 }

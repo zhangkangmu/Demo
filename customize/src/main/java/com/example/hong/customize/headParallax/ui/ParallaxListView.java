@@ -50,9 +50,6 @@ public class ParallaxListView extends ListView {
                 orignalHeight = mImageView.getHeight();
                 int drawableHeight = mImageView.getDrawable().getIntrinsicHeight();//获得图片的真实高度
                 maxHeight = orignalHeight >drawableHeight? orignalHeight *2:drawableHeight+400;
-                Log.d("zyh","orignalHeight:"+ orignalHeight);
-                Log.d("zyh","drawableHeight:"+drawableHeight);
-                Log.d("zyh","maxHeight:"+maxHeight);
                 imageView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
             }
         });
@@ -81,7 +78,6 @@ public class ParallaxListView extends ListView {
                 if (maxHeight<newHeight){
                     newHeight=maxHeight;
                 }
-                Log.d("zyh","newHeight:"+newHeight);
                 mImageView.getLayoutParams().height=newHeight;
                 //使ImageView的布局参数生效
                 mImageView.requestLayout();

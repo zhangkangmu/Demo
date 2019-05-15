@@ -98,13 +98,11 @@ public class CehuaMainContent extends SupportFragment {
         slideMenu.setOnDragChangeListen(new SlideDragLayout.OnDragChangeListen() {
             @Override
             public void onClose() {
-                Log.e("zyh", "onClose");
                 ViewPropertyAnimator.animate(ivHead).translationX(15).setInterpolator(new CycleInterpolator(4)).setDuration(200).start();
             }
 
             @Override
             public void onOpen() {
-                Log.e("zyh","onOpen");
                 menuListview.smoothScrollToPosition(new Random().nextInt(menuListview.getCount()));
             }
 

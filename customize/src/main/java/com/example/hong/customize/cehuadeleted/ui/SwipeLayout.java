@@ -203,7 +203,6 @@ public class SwipeLayout extends FrameLayout {
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         int contentRight = contentView.getMeasuredWidth();
         contentView.layout(0,0,contentWidth,contentHeight);
-        Log.d("zyh","contentRight:"+contentRight);
         deleteView.layout(contentRight,0,contentRight+deleteWidth,deleteHeight);
     }
 
