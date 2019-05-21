@@ -35,6 +35,7 @@ public class MainActivity extends SupportActivity {
     private int position;
 //    SupportFragment fragmenet[4] ={new Frame().in,new };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -42,6 +43,7 @@ public class MainActivity extends SupportActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        loadRootFragment(R.id.fl_content, Frame.newInstance());
 //        Fragmentation.builder()
 //                .stackViewMode(Fragmentation.BUBBLE)
 //                .debug(true)
