@@ -30,4 +30,9 @@ public class OKHttpFragment extends SupportFragment{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }
