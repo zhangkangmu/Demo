@@ -14,6 +14,8 @@ if (findFragment(CustomizeMain.class) == null) {
 5.ParallaxListView中  maxHeight = orignalHeight>drawableHeight?orignalHeight*2:drawableHeight+400;
 本来没有200的，这里不知道为什么不会显示完全的照片，总是缺一点，但是log显示了图片和最大的高度都是732了，然而没有显示完全
 
+6.有空的时候看下duzechao/OKHttpUtils这个类库，github中已经收藏
+
 
 
 
