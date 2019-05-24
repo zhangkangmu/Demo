@@ -381,4 +381,9 @@ public class OKHttpFragment extends SupportFragment implements View.OnClickListe
                 });
     }
 
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }
