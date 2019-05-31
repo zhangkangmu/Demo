@@ -1,8 +1,8 @@
 package com.example.hong.customize;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +13,7 @@ import com.example.hong.customize.cehuadeleted.fragment.SwipeMain;
 import com.example.hong.customize.headParallax.fragment.ParallaxMain;
 import com.example.hong.customize.nianxingkongjian.fragment.GooMian;
 import com.example.hong.customize.quickindex.fragment.QuickIndexMain;
+import com.example.hong.customize.stellarmap.fragment.MapMian;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,6 +38,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     TextView tvSwipelayout;
     @BindView(R2.id.tv_gooview)
     TextView tvgooview;
+    @BindView(R2.id.stellar_map)
+    TextView stellarMap;
 
     public static CustomizeMain newInstance() {
 
@@ -67,6 +70,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         tvParallax.setOnClickListener(this);
         tvSwipelayout.setOnClickListener(this);
         tvgooview.setOnClickListener(this);
+        stellarMap.setOnClickListener(this);
     }
 
     @Override
@@ -98,12 +102,14 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
             start(CehuaMainContent.newInstance());
         } else if (i == R.id.tv_quick_index) {
             start(QuickIndexMain.newInstance());
-        }else if (i==R.id.tv_parallax){
+        } else if (i == R.id.tv_parallax) {
             start(ParallaxMain.newInstance());
-        }else if (i==R.id.tv_swipelayout){
+        } else if (i == R.id.tv_swipelayout) {
             start(SwipeMain.newInstance());
-        }else if (i==R.id.tv_gooview){
+        } else if (i == R.id.tv_gooview) {
             start(GooMian.newInstance());
+        }else if (i == R.id.stellar_map) {
+            start(MapMian.newInstance());
         }
     }
 }

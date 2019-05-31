@@ -1,14 +1,21 @@
 package com.example.hong.customize.utils;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.Toast;
+
+import com.example.hong.customize.CustomizeMain;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
@@ -115,4 +122,21 @@ public class Utils {
         return resources.getDimension(status_bar_height_id);
     }
 
+
+    // /////////////////dip和px转换//////////////////////////
+
+    public static int dip2px(float dip,Context context) {
+        float density = context.getResources().getDisplayMetrics().density;
+        return (int) (dip * density + 0.5f);
+    }
+
+    public static float px2dip(int px,Context context) {
+        float density = context.getResources().getDisplayMetrics().density;
+        return px / density;
+    }
+
+    // /////////////////加载布局文件//////////////////////////
+    public static View inflate(int id,Context context) {
+        return View.inflate(context, id, null);
+    }
 }
