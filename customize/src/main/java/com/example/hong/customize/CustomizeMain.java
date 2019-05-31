@@ -1,6 +1,5 @@
 package com.example.hong.customize;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +13,7 @@ import com.example.hong.customize.headParallax.fragment.ParallaxMain;
 import com.example.hong.customize.nianxingkongjian.fragment.GooMian;
 import com.example.hong.customize.quickindex.fragment.QuickIndexMain;
 import com.example.hong.customize.stellarmap.fragment.MapMian;
+import com.example.hong.customize.stringsort.fragment.StringSortMian;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,6 +40,8 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     TextView tvgooview;
     @BindView(R2.id.stellar_map)
     TextView stellarMap;
+    @BindView(R2.id.string_sort)
+    TextView stringSort;
 
     public static CustomizeMain newInstance() {
 
@@ -71,6 +73,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         tvSwipelayout.setOnClickListener(this);
         tvgooview.setOnClickListener(this);
         stellarMap.setOnClickListener(this);
+        stringSort.setOnClickListener(this);
     }
 
     @Override
@@ -108,8 +111,10 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
             start(SwipeMain.newInstance());
         } else if (i == R.id.tv_gooview) {
             start(GooMian.newInstance());
-        }else if (i == R.id.stellar_map) {
+        } else if (i == R.id.stellar_map) {
             start(MapMian.newInstance());
+        }else if (i == R.id.string_sort) {
+            start(StringSortMian.newInstance());
         }
     }
 }
