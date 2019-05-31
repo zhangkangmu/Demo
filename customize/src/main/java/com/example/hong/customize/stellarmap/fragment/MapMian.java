@@ -61,6 +61,7 @@ public class MapMian extends SupportFragment implements StellarOnClick {
         ShakeListener shake = new ShakeListener(_mActivity);
         shake.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
+            //设置摇晃事件
             @Override
             public void onShake() {
                 stellar.zoomIn();// 跳到下一页数据
