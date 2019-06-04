@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.hong.customize.CustomizeMain;
+import com.example.hong.features.FeaturesMain;
 import com.example.hong.frame.fragment.Frame;
 
 import butterknife.BindView;
@@ -70,6 +71,7 @@ public class MainActivity extends SupportActivity {
 //                }
                 break;
             case R.id.bt_texiao:
+                loadRootFragment(R.id.fl_content, FeaturesMain.newInstance());
                 break;
             case R.id.bt_yangshi:
                 break;
