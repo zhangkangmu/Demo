@@ -3,6 +3,7 @@ package com.example.hong.demo;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -18,6 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.yokeyword.fragmentation.SupportActivity;
+import me.yokeyword.fragmentation.SupportFragment;
 
 public class MainActivity extends SupportActivity {
 
@@ -34,8 +36,10 @@ public class MainActivity extends SupportActivity {
     @BindView(R.id.radioGroup)
     RadioGroup radioGroup;
     private int position;
-//    SupportFragment fragmenet[4] ={new Frame().in,new };
-
+    SupportFragment frame =Frame.newInstance();
+    SupportFragment customizemain =CustomizeMain.newInstance();
+    SupportFragment featuresmain =FeaturesMain.newInstance();
+    SupportFragment[] fragmenet ={frame,customizemain,featuresmain};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,16 +66,16 @@ public class MainActivity extends SupportActivity {
         switch (view.getId()) {
             case R.id.bt_kuangjia:
 //                if (findFragment(Frame.class) == null) {
-                    loadRootFragment(R.id.fl_content, Frame.newInstance());
+                    loadRootFragment(R.id.fl_content, fragmenet[0]);
 //                }
                 break;
             case R.id.bt_zidingyi:
 //                if (findFragment(CustomizeMain.class) == null) {
-                    loadRootFragment(R.id.fl_content, CustomizeMain.newInstance());
+                    loadRootFragment(R.id.fl_content, fragmenet[1]);
 //                }
                 break;
             case R.id.bt_texiao:
-                loadRootFragment(R.id.fl_content, FeaturesMain.newInstance());
+                loadRootFragment(R.id.fl_content, fragmenet[2]);
                 break;
             case R.id.bt_yangshi:
                 break;

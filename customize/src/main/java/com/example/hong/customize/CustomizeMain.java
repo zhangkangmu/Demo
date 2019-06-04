@@ -1,7 +1,9 @@
 package com.example.hong.customize;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import com.example.hong.customize.nianxingkongjian.fragment.GooMian;
 import com.example.hong.customize.quickindex.fragment.QuickIndexMain;
 import com.example.hong.customize.stellarmap.fragment.MapMian;
 import com.example.hong.customize.stringsort.fragment.StringSortMian;
+import com.example.hong.customize.youkutexiao.YouKu;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,11 +45,13 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     TextView stellarMap;
     @BindView(R2.id.string_sort)
     TextView stringSort;
+    @BindView(R2.id.youku_texiao)
+    TextView youku_texiao;
 
     public static CustomizeMain newInstance() {
 
         Bundle args = new Bundle();
-
+        Log.d("zyh","CustomizeMain newInstance");
         CustomizeMain fragment = new CustomizeMain();
         fragment.setArguments(args);
         return fragment;
@@ -57,6 +62,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.customize_mian_layout, container, false);
         unbinder = ButterKnife.bind(this, view);
+        Log.d("zyh","CustomizeMain onCreateView");
         return view;
     }
 
@@ -74,6 +80,7 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
         tvgooview.setOnClickListener(this);
         stellarMap.setOnClickListener(this);
         stringSort.setOnClickListener(this);
+        youku_texiao.setOnClickListener(this);
     }
 
     @Override
@@ -115,6 +122,9 @@ public class CustomizeMain extends SupportFragment implements View.OnClickListen
             start(MapMian.newInstance());
         }else if (i == R.id.string_sort) {
             start(StringSortMian.newInstance());
+        }else if (i == R.id.youku_texiao) {
+            Intent intent = new Intent(getActivity(), YouKu.class);
+            startActivity(new Intent(intent));
         }
     }
 }

@@ -33,6 +33,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         Bundle args = new Bundle();
         Frame fragment = new Frame();
         fragment.setArguments(args);
+        Log.d("zyh","Frame newInstance");
         return fragment;
     }
 
@@ -47,6 +48,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         glide = view.findViewById(R.id.glide);
         greendao = view.findViewById(R.id.greendao);
         rxJava = view.findViewById(R.id.rxJava);
+        Log.d("zyh","Frame onCreateView");
         return view;
     }
 

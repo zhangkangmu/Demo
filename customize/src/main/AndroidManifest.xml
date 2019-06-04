@@ -1,2 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hong.customize" />
+    package="com.example.hong.customize" >
+    <application>
+        <activity android:name=".youkutexiao.YouKu">
+        </activity>
+    </application>
+</manifest>
