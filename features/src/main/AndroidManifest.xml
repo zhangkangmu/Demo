@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hong.features" />
+    package="com.example.hong.features" >
+    <application>
+        <activity android:name=".xialaxuanzekuang.DropDown"/>
+    </application>
+</manifest>

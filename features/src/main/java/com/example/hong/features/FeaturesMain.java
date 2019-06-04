@@ -1,5 +1,6 @@
 package com.example.hong.features;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.hong.features.advertisement.Advertisement;
 import com.example.hong.features.cotrolswitch.ControlSwitch;
+import com.example.hong.features.xialaxuanzekuang.DropDown;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
@@ -20,7 +22,7 @@ import me.yokeyword.fragmentation.SupportFragment;
 public class FeaturesMain extends SupportFragment implements View.OnClickListener{
 
     private TextView tv_advertisement;
-    private TextView tv_switch;
+    private TextView tv_switch,tv_xialaxaunze;
 
     public static FeaturesMain newInstance() {
         Bundle args = new Bundle();
@@ -36,6 +38,7 @@ public class FeaturesMain extends SupportFragment implements View.OnClickListene
         View view = inflater.inflate(R.layout.features_mian_layout, container, false);
         tv_advertisement = view.findViewById(R.id.tv_advertisement);
         tv_switch = view.findViewById(R.id.tv_switch);
+        tv_xialaxaunze = view.findViewById(R.id.tv_xialaxaunze);
         initListen();
         Log.d("zyh","FeaturesMain onCreateView");
         return view;
@@ -44,6 +47,7 @@ public class FeaturesMain extends SupportFragment implements View.OnClickListene
     private void initListen() {
         tv_advertisement.setOnClickListener(this);
         tv_switch.setOnClickListener(this);
+        tv_xialaxaunze.setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +62,8 @@ public class FeaturesMain extends SupportFragment implements View.OnClickListene
             start(Advertisement.newInstance());
         }else if (i == R.id.tv_switch) {
             start(ControlSwitch.newInstance());
+        }else if (i == R.id.tv_xialaxaunze) {
+            startActivity(new Intent(getActivity(), DropDown.class));
         }
     }
 }
