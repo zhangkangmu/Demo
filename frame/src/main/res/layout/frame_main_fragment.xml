@@ -42,15 +42,6 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/glide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Glide"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-
-    <TextView
         android:id="@+id/greendao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,6 +73,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="recyclerview"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Glide图片加载"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 </LinearLayout>

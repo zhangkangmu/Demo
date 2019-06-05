@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.example.hong.frame.R;
 import com.example.hong.frame.fragment.EventBus.EventBusMain;
+import com.example.hong.frame.fragment.glide.GlideMain;
+import com.example.hong.frame.fragment.glide.GlideTranformationsActivity;
 import com.example.hong.frame.fragment.okhttp.fragment.OKHttpFragment;
 import com.example.hong.frame.fragment.recyclerview.RecyclerViewMian;
 
@@ -96,17 +98,17 @@ public class Frame extends SupportFragment implements View.OnClickListener {
             Toast.makeText(_mActivity,"retrofit2",Toast.LENGTH_SHORT).show();
         }else if (i==R.id.Fresco){
             Toast.makeText(_mActivity,"Fresco",Toast.LENGTH_SHORT).show();
-        }else if (i==R.id.glide){
-            Toast.makeText(_mActivity,"glide",Toast.LENGTH_SHORT).show();
         }else if (i==R.id.greendao){
             Toast.makeText(_mActivity,"greendao",Toast.LENGTH_SHORT).show();
         }else if (i==R.id.rxJava){
             Toast.makeText(_mActivity,"rxJava",Toast.LENGTH_SHORT).show();
         }else if (i==R.id.evevt_bus){
             startActivity(new Intent(getActivity(), EventBusMain.class));
-        }else if (i==R.id.recyclerview){
-        startActivity(new Intent(getActivity(), RecyclerViewMian.class));
-    }
+        } else if (i == R.id.recyclerview) {
+            startActivity(new Intent(getActivity(), RecyclerViewMian.class));
+        } else if (i == R.id.glide) {
+            startActivity(new Intent(getActivity(), GlideMain.class));
+        }
     }
 
     @Override

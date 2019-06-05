@@ -1,9 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hong.frame" >
+    package="com.example.hong.frame">
+
     <application>
-        <activity android:name=".fragment.EventBus.EventBusMain"/>
-        <activity android:name=".fragment.EventBus.EventBusSendActivity"/>
-        <activity android:name=".fragment.recyclerview.RecyclerViewMian"
-            android:theme="@style/listDividerTheme"/>
+        <activity android:name=".fragment.EventBus.EventBusMain" />
+        <activity android:name=".fragment.EventBus.EventBusSendActivity" />
+        <activity
+            android:name=".fragment.recyclerview.RecyclerViewMian"
+            android:theme="@style/listDividerTheme" />
+        <activity android:name=".fragment.glide.GlideRecyclerviewActivity" />
+        <activity android:name=".fragment.glide.GlideBaseActivity" />
+        <activity android:name=".fragment.glide.GlideMain" />
+        <activity android:name=".fragment.glide.GlideTranformationsActivity"></activity>
     </application>
+
 </manifest>
