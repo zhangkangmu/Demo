@@ -1,5 +1,6 @@
 package com.example.hong.frame.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hong.frame.R;
+import com.example.hong.frame.fragment.EventBus.EventBusMain;
 import com.example.hong.frame.fragment.okhttp.fragment.OKHttpFragment;
 
 import me.yokeyword.fragmentation.SupportFragment;
@@ -29,6 +31,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
     private TextView glide;
     private TextView greendao;
     private TextView rxJava;
+    private TextView evevt_bus;
 
     public static Frame newInstance() {
         Bundle args = new Bundle();
@@ -49,6 +52,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         glide = view.findViewById(R.id.glide);
         greendao = view.findViewById(R.id.greendao);
         rxJava = view.findViewById(R.id.rxJava);
+        evevt_bus = view.findViewById(R.id.evevt_bus);
         Log.d("zyh","Frame onCreateView");
         return view;
     }
@@ -67,6 +71,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         glide.setOnClickListener(this);
         greendao.setOnClickListener(this);
         rxJava.setOnClickListener(this);
+        evevt_bus.setOnClickListener(this);
     }
 
     @Override
@@ -92,6 +97,8 @@ public class Frame extends SupportFragment implements View.OnClickListener {
             Toast.makeText(_mActivity,"greendao",Toast.LENGTH_SHORT).show();
         }else if (i==R.id.rxJava){
             Toast.makeText(_mActivity,"rxJava",Toast.LENGTH_SHORT).show();
+        }else if (i==R.id.evevt_bus){
+            startActivity(new Intent(getActivity(), EventBusMain.class));
         }
     }
 

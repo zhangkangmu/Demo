@@ -37,5 +37,8 @@ dependencies {
     //    compile 'me.yokeyword:fragmentation:{version}'
     // swipeback基于fragmentation, 如果是自定制SupportActivity/Fragment，则参照SwipeBackActivity/Fragment实现即可
     //    compile 'me.yokeyword:fragmentation-swipeback:{version}'
+    //okhtt
     implementation 'com.zhy:okhttputils:2.6.2'
+    implementation files('lib/eventbus-3.0.0.jar')
+    implementation files('lib/eventbus-3.0.0-sources.jar')
 }
