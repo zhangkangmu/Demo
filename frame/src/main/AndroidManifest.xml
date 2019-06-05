@@ -3,5 +3,7 @@
     <application>
         <activity android:name=".fragment.EventBus.EventBusMain"/>
         <activity android:name=".fragment.EventBus.EventBusSendActivity"/>
+        <activity android:name=".fragment.recyclerview.RecyclerViewMian"
+            android:theme="@style/listDividerTheme"/>
     </application>
 </manifest>

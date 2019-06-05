@@ -41,4 +41,5 @@ dependencies {
     implementation 'com.zhy:okhttputils:2.6.2'
     implementation files('lib/eventbus-3.0.0.jar')
     implementation files('lib/eventbus-3.0.0-sources.jar')
+    compile 'com.android.support:recyclerview-v7:26.+'
 }

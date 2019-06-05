@@ -3,6 +3,7 @@ package com.example.hong.frame.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.example.hong.frame.R;
 import com.example.hong.frame.fragment.EventBus.EventBusMain;
 import com.example.hong.frame.fragment.okhttp.fragment.OKHttpFragment;
+import com.example.hong.frame.fragment.recyclerview.RecyclerViewMian;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
@@ -32,6 +34,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
     private TextView greendao;
     private TextView rxJava;
     private TextView evevt_bus;
+    private TextView recyclerview;
 
     public static Frame newInstance() {
         Bundle args = new Bundle();
@@ -53,6 +56,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         greendao = view.findViewById(R.id.greendao);
         rxJava = view.findViewById(R.id.rxJava);
         evevt_bus = view.findViewById(R.id.evevt_bus);
+        recyclerview = view.findViewById(R.id.recyclerview);
         Log.d("zyh","Frame onCreateView");
         return view;
     }
@@ -72,6 +76,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         greendao.setOnClickListener(this);
         rxJava.setOnClickListener(this);
         evevt_bus.setOnClickListener(this);
+        recyclerview.setOnClickListener(this);
     }
 
     @Override
@@ -99,7 +104,9 @@ public class Frame extends SupportFragment implements View.OnClickListener {
             Toast.makeText(_mActivity,"rxJava",Toast.LENGTH_SHORT).show();
         }else if (i==R.id.evevt_bus){
             startActivity(new Intent(getActivity(), EventBusMain.class));
-        }
+        }else if (i==R.id.recyclerview){
+        startActivity(new Intent(getActivity(), RecyclerViewMian.class));
+    }
     }
 
     @Override
