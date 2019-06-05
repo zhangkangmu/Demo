@@ -149,68 +149,71 @@ public class GlideTranformationsAdapter extends RecyclerView.Adapter<GlideTranfo
                         .bitmapTransform(new BlurTransformation(mContext, 25))
                         .into(holder.image);
                 break;
-            case 12:
-                Glide.with(mContext)
-                        .load(R.drawable.demo)
-                        .bitmapTransform(new ToonFilterTransformation(mContext))
-                        .into(holder.image);
-                break;
-            case 13:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new SepiaFilterTransformation(mContext))
-                        .into(holder.image);
-                break;
-            case 14:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new ContrastFilterTransformation(mContext, 2.0f))
-                        .into(holder.image);
-                break;
-            case 15:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new InvertFilterTransformation(mContext))
-                        .into(holder.image);
-                break;
-            case 16:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new PixelationFilterTransformation(mContext, 20))
-                        .into(holder.image);
-                break;
-            case 17:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new SketchFilterTransformation(mContext))
-                        .into(holder.image);
-                break;
-            case 18:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(
-                                new SwirlFilterTransformation(mContext, 0.5f, 1.0f, new PointF(0.5f, 0.5f)))
-                        .into(holder.image);
-                break;
-            case 19:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new BrightnessFilterTransformation(mContext, 0.5f))
-                        .into(holder.image);
-                break;
-            case 20:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new KuwaharaFilterTransformation(mContext, 25))
-                        .into(holder.image);
-                break;
-            case 21:
-                Glide.with(mContext)
-                        .load(R.drawable.glide_tranformations_adapter_check)
-                        .bitmapTransform(new VignetteFilterTransformation(mContext, new PointF(0.5f, 0.5f),
-                                new float[]{0.0f, 0.0f, 0.0f}, 0f, 0.75f))
-                        .into(holder.image);
-                break;
+//            case 12:
+//                Glide.with(mContext)
+//                        .load(R.drawable.demo)
+//                        .error(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new ToonFilterTransformation(mContext))
+//                        .into(holder.image);
+//                break;
+//            case 13:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .error(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new SepiaFilterTransformation(mContext))
+//                        .into(holder.image);
+//                break;
+//            case 14:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .error(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new ContrastFilterTransformation(mContext, 2.0f))
+//                        .into(holder.image);
+//                break;
+//            case 15:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new InvertFilterTransformation(mContext))
+//                        .into(holder.image);
+//                break;
+//            case 16:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new PixelationFilterTransformation(mContext, 20))
+//                        .into(holder.image);
+//                break;
+//            case 17:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new SketchFilterTransformation(mContext))
+//                        .into(holder.image);
+//                break;
+//            case 18:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(
+//                                new SwirlFilterTransformation(mContext, 0.5f, 1.0f, new PointF(0.5f, 0.5f)))
+//                        .into(holder.image);
+//                break;
+//            case 19:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new BrightnessFilterTransformation(mContext, 0.5f))
+//                        .into(holder.image);
+//                break;
+//            case 20:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new KuwaharaFilterTransformation(mContext, 25))
+//                        .into(holder.image);
+//                break;
+//            case 21:
+//                Glide.with(mContext)
+//                        .load(R.drawable.glide_tranformations_adapter_check)
+//                        .bitmapTransform(new VignetteFilterTransformation(mContext, new PointF(0.5f, 0.5f),
+//                                new float[]{0.0f, 0.0f, 0.0f}, 0f, 0.75f))
+//                        .into(holder.image);
+//                break;
         }
     }
 
