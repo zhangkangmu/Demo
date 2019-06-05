@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hong.frame.R;
 
@@ -84,7 +85,37 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             super(itemView);
             iv_icon = itemView.findViewById(R.id.iv_icon);
             tv_title = itemView.findViewById(R.id.tv_title);
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(onItemClickListener != null){
+                        onItemClickListener.onItemClick(v,datas.get(getLayoutPosition()));
+                    }
+                }
+            });
+            iv_icon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(mContext, "我是图片=="+getLayoutPosition(), Toast.LENGTH_SHORT).show();
+                }
+            });
         }
+    }
+
+    public interface OnItemClickListener{
+        /**
+         * 当RecyclerView某个被点击的时候回调
+         * @param view 点击item的视图
+         * @param data 点击得到的数据
+         */
+        public void onItemClick(View view,String data);
+    }
+    private OnItemClickListener onItemClickListener;
+    /**
+     * 设置RecyclerView某个的监听
+     * @param onItemClickListener
+     */
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 }

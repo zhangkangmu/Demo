@@ -3,6 +3,7 @@ package com.example.hong.frame.fragment.recyclerview;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.hong.frame.R;
 import com.example.hong.frame.fragment.recyclerview.adapter.MyRecyclerViewAdapter;
@@ -50,6 +52,15 @@ public class RecyclerViewMian extends Activity implements View.OnClickListener {
 
         //添加RecyclerView的分割线,DividerListItemDecoration是一个自定义的分割线
         mRecyclerview.addItemDecoration(new DividerListItemDecoration(this,DividerListItemDecoration.VERTICAL_LIST));
+        adapter.setOnItemClickListener(new MyRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, String data) {
+                Toast.makeText(getApplicationContext(),data,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //设置动画
+        mRecyclerview.setItemAnimator(new DefaultItemAnimator());
     }
 
     //设置集合的数据
