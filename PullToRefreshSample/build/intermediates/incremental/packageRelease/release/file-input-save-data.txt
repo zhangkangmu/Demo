@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Fri Jun 07 13:16:19 CST 2019
+1.base=G\:\\Code\\android\\Demo\\Demo\\PullToRefreshSample\\build\\intermediates\\assets\\release
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=ASSET
+0.path=classes.dex
+0.set=DEX
+0.base=G\:\\Code\\android\\Demo\\Demo\\PullToRefreshSample\\build\\intermediates\\transforms\\dex\\release\\0
+1.path=ptr_webview2_sample.html

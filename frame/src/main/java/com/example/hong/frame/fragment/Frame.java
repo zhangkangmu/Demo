@@ -1,9 +1,9 @@
 package com.example.hong.frame.fragment;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.example.hong.frame.R;
 import com.example.hong.frame.fragment.EventBus.EventBusMain;
 import com.example.hong.frame.fragment.glide.GlideMain;
-import com.example.hong.frame.fragment.glide.GlideTranformationsActivity;
 import com.example.hong.frame.fragment.okhttp.fragment.OKHttpFragment;
 import com.example.hong.frame.fragment.recyclerview.RecyclerViewMian;
 
@@ -37,6 +36,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
     private TextView rxJava;
     private TextView evevt_bus;
     private TextView recyclerview;
+    private TextView pullrefresh;
 
     public static Frame newInstance() {
         Bundle args = new Bundle();
@@ -59,6 +59,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         rxJava = view.findViewById(R.id.rxJava);
         evevt_bus = view.findViewById(R.id.evevt_bus);
         recyclerview = view.findViewById(R.id.recyclerview);
+        pullrefresh = view.findViewById(R.id.pullrefresh);
         Log.d("zyh","Frame onCreateView");
         return view;
     }
@@ -79,6 +80,7 @@ public class Frame extends SupportFragment implements View.OnClickListener {
         rxJava.setOnClickListener(this);
         evevt_bus.setOnClickListener(this);
         recyclerview.setOnClickListener(this);
+        pullrefresh.setOnClickListener(this);
     }
 
     @Override
@@ -108,6 +110,8 @@ public class Frame extends SupportFragment implements View.OnClickListener {
             startActivity(new Intent(getActivity(), RecyclerViewMian.class));
         } else if (i == R.id.glide) {
             startActivity(new Intent(getActivity(), GlideMain.class));
+        }else if (i == R.id.pullrefresh) {
+            startActivity(new Intent(getActivity(), com.example.hong.frame.fragment.pulltorefresh.LauncherActivity.class));
         }
     }
 

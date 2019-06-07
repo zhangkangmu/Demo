@@ -12,6 +12,17 @@
         <activity android:name=".fragment.glide.GlideBaseActivity" />
         <activity android:name=".fragment.glide.GlideMain" />
         <activity android:name=".fragment.glide.GlideTranformationsActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.LauncherActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshExpandableListActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshGridActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshHorizontalScrollViewActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshListActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshListFragmentActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshListInViewPagerActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshScrollViewActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshViewPagerActivity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshWebView2Activity"></activity>
+        <activity android:name=".fragment.pulltorefresh.PullToRefreshWebViewActivity"></activity>
     </application>
 
 </manifest>

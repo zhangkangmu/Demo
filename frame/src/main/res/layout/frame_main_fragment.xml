@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="20dp"
@@ -76,11 +77,19 @@
         android:textColor="@android:color/black"
         android:textSize="16sp" />
     <TextView
-        android:id="@+id/glide"
+    android:id="@+id/glide"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Glide图片加载"
+    android:textColor="@android:color/black"
+    android:textSize="16sp" />
+    <TextView
+        android:id="@+id/pullrefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Glide图片加载"
+        android:text="下拉刷新，下拉加载更多"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 </LinearLayout>

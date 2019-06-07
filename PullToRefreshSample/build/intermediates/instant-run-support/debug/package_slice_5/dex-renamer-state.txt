@@ -1,0 +1,4 @@
+#Fri Jun 07 12:59:34 CST 2019
+base.0=G\:\\Code\\android\\Demo\\Demo\\PullToRefreshSample\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex
